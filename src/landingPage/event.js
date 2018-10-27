@@ -2,23 +2,19 @@ import React from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import firebase from './firebase.js';
 
-const events = [];
-
-function addEvents(quantity) {
-  const startId = events.length;
-  for (let i = 0; i < quantity; i++) {
-    const id = startId + i;
-    events.push({
-      event_id: event_id,
-      event_name: event_name,
-      event_description: 'Event description ' + event_id,
-      event_date: event_date
-    });
-  }
-}
-
 
 class Event extends React.Component {
+    constructor(){
+      super();
+      this.state = {
+        event_id: "",
+        event_name: "",
+        event_description: "",
+        event_date: "",
+        events: []
+      }
+    }
+
     componentDidMount() {
         const eventRef = firebase.database().ref('events');
         eventRef.on('value', (snapshot) => {
@@ -27,13 +23,14 @@ class Event extends React.Component {
           for (let event in events) {
             newEvent.push({
                 event_id: event,
-                event_name: event_name,
-                event_description: 'Event description ' + event_id,
-                event_date: event_date
+                event_name: events[event].event_name,
+                event_description: events[event].event_description,
+                event_date: events[event].event_date
             });
           }
+          console.log(newEvent)
           this.setState({
-            items: newEvent
+            events: newEvent
           });
         });
     }
@@ -47,11 +44,11 @@ class Event extends React.Component {
             clickToNav: false
           };
         return (
-            <BootstrapTable data={ events } selectRow={ selectRow } keyBoardNav={ keyBoardNav }>
-            <TableHeaderColumn dataField='event_id' isKey={ true }>#</TableHeaderColumn>
-            <TableHeaderColumn dataField='event_name'>Event Name</TableHeaderColumn>
-            <TableHeaderColumn dataField='event_description'>Description</TableHeaderColumn>
-            <TableHeaderColumn dataField='event_date'>Date</TableHeaderColumn>
+            <BootstrapTable data={ this.state.events } selectRow={ selectRow } keyBoardNav={ keyBoardNav }>
+            <TableHeaderColumn dataField={this.state.event_id} isKey={ true }>#</TableHeaderColumn>
+            <TableHeaderColumn dataField={this.state.event_name}>Event Name</TableHeaderColumn>
+            <TableHeaderColumn dataField={this.state.event_description}>Description</TableHeaderColumn>
+            <TableHeaderColumn dataField={this.state.event_date}>Date</TableHeaderColumn>
         </BootstrapTable>
         );
     }
