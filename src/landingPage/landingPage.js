@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Produce from './produce';
 import NavigationBar from '../homeComponent/navbar';
-import HoverStripedTable from './event';
-
+import Event from './event';
 
 class landingPage extends Component {
 	constructor() {
@@ -15,7 +14,7 @@ class landingPage extends Component {
 				<div>
 					<NavigationBar />
 					<Produce />
-					<HoverStripedTable />
+					<Event />
 				</div>
 			</div>
 		);
