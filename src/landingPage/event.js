@@ -1,6 +1,6 @@
 import React from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-
+import firebase from './firebase.js';
 
 const events = [];
 
@@ -16,9 +16,26 @@ function addEvents(quantity) {
   }
 }
 
-addEvents(5);
 
 class HoverStripedTable extends React.Component {
+    componentDidMount() {
+        const eventRef = firebase.database().ref('events');
+        eventRef.on('value', (snapshot) => {
+          let events = snapshot.val();
+          let newEvent = [];
+          for (let event in events) {
+            newEvent.push({
+                event_id: event,
+                event_description: 'Event description ' + event_id,
+                event_date: event_date
+            });
+          }
+          this.setState({
+            items: newEvent
+          });
+        });
+    }
+
     render() {
         const selectRow = {
             mode: 'checkbox',
@@ -35,4 +52,5 @@ class HoverStripedTable extends React.Component {
         </BootstrapTable>
         );
     }
-  }
+}
+export default HoverStripedTable;
