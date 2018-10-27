@@ -7,9 +7,9 @@ class App extends Component {
     return (
       <div className="App">
         <Routes />
+        <FooterPage />
       </div>
     );
   }
 }
-
 export default App;
