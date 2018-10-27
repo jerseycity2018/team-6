@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import FoodItem from './foodItem';
+import './foodItem.css';
 
-class produce extends Component {
+class Produce extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -14,22 +16,16 @@ class produce extends Component {
 			<div className = 'produce'>
 				<header> 
 					<div className = 'wrapper'>
-						<h1> Produce Currently Available </h1> 
+						<h1 className="heading prohead"> Produce Currently Available </h1> 
 					</div>
 				</header>
-				<div className = 'container'>
-					<section className = 'display-item'>
-						<div className = 'wrapper'>
-							<ul>
-								{produceList}
-							</ul>
-						</div>
-					</section>
+				<div className="foodContainer">
+					<FoodItem />
 				</div>
 			</div>
 		);
 	}
 }
 
-export default produce;
+export default Produce;
 
