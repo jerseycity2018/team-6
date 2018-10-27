@@ -17,7 +17,7 @@ function addEvents(quantity) {
 }
 
 
-class HoverStripedTable extends React.Component {
+class Event extends React.Component {
     componentDidMount() {
         const eventRef = firebase.database().ref('events');
         eventRef.on('value', (snapshot) => {
@@ -53,4 +53,4 @@ class HoverStripedTable extends React.Component {
         );
     }
 }
-export default HoverStripedTable;
+export default Event;

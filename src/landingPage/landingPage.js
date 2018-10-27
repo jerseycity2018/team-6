@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Produce from './produce';
 import NavigationBar from '../homeComponent/navbar';
+import Event from './event';
 
 class landingPage extends Component {
 	constructor() {
@@ -13,6 +14,7 @@ class landingPage extends Component {
 				<div>
 					<NavigationBar />
 					<Produce />
+					<Event />
 				</div>
 			</div>
 		);
