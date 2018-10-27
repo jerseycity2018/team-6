@@ -45,10 +45,10 @@ class Event extends React.Component {
           };
         return (
             <BootstrapTable data={ this.state.events } selectRow={ selectRow } keyBoardNav={ keyBoardNav }>
-            <TableHeaderColumn dataField={this.state.event_id} isKey={ true }>#</TableHeaderColumn>
-            <TableHeaderColumn dataField={this.state.event_name}>Event Name</TableHeaderColumn>
-            <TableHeaderColumn dataField={this.state.event_description}>Description</TableHeaderColumn>
-            <TableHeaderColumn dataField={this.state.event_date}>Date</TableHeaderColumn>
+            <TableHeaderColumn dataField='event_id' isKey>#</TableHeaderColumn>
+            <TableHeaderColumn dataField='event_name'>Event Name</TableHeaderColumn>
+            <TableHeaderColumn dataField='event_description'>Description</TableHeaderColumn>
+            <TableHeaderColumn dataField='event_date}'>Date</TableHeaderColumn>
         </BootstrapTable>
         );
     }
