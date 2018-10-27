@@ -19,33 +19,36 @@ class Announcements extends React.Component {
 	render(){
 		const announcementsList = this.state.items.map(item => <li>{item}</li>)
 		return (
-			<div className = 'announcements'>
-				<header> 
-						<div className = 'wrapper'>
-							<h1 className="announcement"> Announcements </h1> 
-						</div>
-				</header>
-				<Container>
-					<Row>
-						<Col sm="12" md={{ size: 6, offset: 4 }}>
-							<div class = 'green-box'>
-								<h3>Updates about today's evening yoga class at 6:30 pm</h3>
-								<p>Class is cancelled</p>
+			<div>
+				<NavigationBar />
+				<div className = 'announcements'>
+					<header> 
+							<div className = 'wrapper'>
+								<h1 className="announcement"> Announcements </h1> 
 							</div>
-						</Col>
-					</Row>
+					</header>
+					<Container>
+						<Row>
+							<Col sm="12" md={{ size: 6, offset: 4 }}>
+								<div class = 'green-box'>
+									<h3>Updates about today's evening yoga class at 6:30 pm</h3>
+									<p>Class is cancelled</p>
+								</div>
+							</Col>
+						</Row>
 
-					<Row>
-						<Col sm="12" md={{ size: 6, offset: 4 }}>
-							<div class = 'green-box'>
-								<h3>Exciting news about opening another farm location in West 
-									8th Street, Brooklyn area</h3>
-								<p>Please, come, check it out, and volunteer at our recently
-								opened farm in Brooklyn!</p>
-							</div>
-						</Col>
-					</Row>
-				</Container>
+						<Row>
+							<Col sm="12" md={{ size: 6, offset: 4 }}>
+								<div class = 'green-box'>
+									<h3>Exciting news about opening another farm location in West 
+										8th Street, Brooklyn area</h3>
+									<p>Please, come, check it out, and volunteer at our recently
+									opened farm in Brooklyn!</p>
+								</div>
+							</Col>
+						</Row>
+					</Container>
+				</div>
 			</div>
 		);
   }  
