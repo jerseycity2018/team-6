@@ -1,5 +1,6 @@
 import React from 'react';
 import './announcements.css';
+import NavigationBar from './navbar';
 import {Container, Row, Col} from 'reactstrap';
 
 class Announcements extends React.Component {
