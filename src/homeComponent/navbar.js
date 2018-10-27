@@ -31,6 +31,9 @@ class NavigationBar extends React.Component {
                     <NavLink href="/mission">Mission</NavLink>
                   </NavItem>
                   <NavItem>
+                    <NavLink href="/usercontributions">User Contributions</NavLink>
+                  </NavItem>
+                  <NavItem>
                     <NavLink href="/signIn">Sign In</NavLink>
                   </NavItem>
                 </Nav>
