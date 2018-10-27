@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import NavigationBar from './navbar';
-import { UncontrolledCarousel, Container, Row, Col } from 'reactstrap';
+import { Jumbotron, UncontrolledCarousel, Container, Row, Col, Button } from 'reactstrap';
 import './home.css';
 
 const items = [
@@ -19,7 +19,12 @@ class home extends Component {
             <div>
             	<NavigationBar />
                 <div>
-                	<UncontrolledCarousel items={items} />
+                    <Jumbotron style={{ paddingTop: '20%',
+  paddingBottom: '20%', backgroundSize:'cover',backgroundImage: 'url(https://images.unsplash.com/photo-1454579943364-13b2d508c27a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=67dd20a992371ea2aa9ba46414a66988&auto=format&fit=crop&w=1950&q=80)'}}>
+                        <h1 className="display-3">Working Toward Green City</h1>
+                        <Button href="/landingpage" style={{padding: '10px 20px', marginTop: '10px'}} size="lg" color="success">Join Us!</Button>{' '}
+                        <hr className="my-2" />
+                     </Jumbotron>
                 </div>
                 <div>
                 	

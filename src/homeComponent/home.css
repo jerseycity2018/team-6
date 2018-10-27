@@ -32,3 +32,9 @@ h1 .mission-statement {
 	background: gainsboro;
 	padding: 20px;
 }
+
+.display-3 {
+	color: white;
+	font-family: 'Noto Serif', sans-serif;
+	text-shadow: 2px 2px grey;
+}

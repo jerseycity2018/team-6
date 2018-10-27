@@ -19,16 +19,13 @@ class NavigationBar extends React.Component {
     render() {
         return (
           <div className="navStyle">
-            <Navbar style={{padding: '30px'}} color="faded" light expand="lg">
-              <NavbarBrand pull-left><img src="/src/images/logo.svg"/></NavbarBrand>
+            <Navbar style={{padding: '10px'}} color="faded" light expand="lg">
+              <NavbarBrand pull-left><img className="imgSize" src="https://pbs.twimg.com/profile_images/935880969470533632/KprX4QLZ_400x400.jpg"/></NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink href="/home">Home</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="/mission">Mission</NavLink>
+                    <NavLink href="/">Home</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink href="/usercontributions">User Contributions</NavLink>
