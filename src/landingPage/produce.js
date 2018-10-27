@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import FoodItem from './foodItem';
 import './foodItem.css';
+import firebase from './firebase.js';
 
 class Produce extends Component {
 	constructor() {
@@ -8,6 +9,17 @@ class Produce extends Component {
 		this.state = {
 			items: []
 		}
+	this.handleChange = this.handleChange.bind(this);
+	this.handleSubmit = this.handleSubmit.bind(this);
+	}
+	handleChange(e) {
+  		this.setState({
+    	[e.target.name]: e.target.value
+ 	 	});
+	}
+
+	handleSubmit(e) {
+  		e.preventDefault();
 	}
 
 	render(){
