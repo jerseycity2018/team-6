@@ -11,8 +11,8 @@ Green City Force’s (GCF) mission is to break the cycle of poverty, preparing u
 
 The following **required** user stories are complete:
 
-- [ ] 
-- [ ] 
+- [ ] Display the free produce
+- [ ] Display events hosted by the Farm
 - [ ] 
 - [ ] 
 - [ ] 
