@@ -33,14 +33,17 @@ class home extends Component {
 				          <Col sm="6" xs="12">
 				          	<h2 className="sub">Mission</h2>
 				          	<p>
-							  Raise awareness and promote the program, maintain the NYCHA residents's initial commitment to their behavior changes, and incentivize continued use of the platform and engagement with GCF’s programs. Empower and encourage the users to meet these needs by using reward programs and leader board system to keep track of their participation in the program.
+							  Raise awareness and promote the program, maintain the NYCHA residents's initial commitment to their behavior changes, 
+							  and incentivize continued use of the platform and engagement with GCF’s programs. 
+							  Empower and encourage the users to meet their needs by using reward programs and leader board system to keep track of their participation in the program.
 	                		
 	                		</p>
 
 	                		<h2 className="sub">Community</h2>
 	                		<p>
-	                			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-	                			 Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+							GCF is an AmeriCorps Nonprofit organization founded in 2009. 
+							GCF works in close collaboration with the NYC Housing Authority (NYCHA) to engage 18-24 year old residents in training and service projects that give them the skills and certifications required to access careers in the sustainable economy. 
+							Since inception, GCF has engaged over 550 young adults in service, and celebrates an alumni network of 400+. 
 	                		</p>
 				          </Col >
 				          <Col sm="6" xs="12">
