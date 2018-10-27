@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { UncontrolledCarousel, Container, Row, Col } from 'reactstrap';
+import './usercontributions.css';
+import NavigationBar from '../homeComponent/navbar';
 
 
 var DonutChart = require('react-chartjs').Doughnut;
@@ -79,7 +81,7 @@ class UserContributions extends Component {
 	render(){
 		return (
 			<div className = 'usercontribution'>
-
+			<NavigationBar />
 			<Container>
 				<Row>
 					<Col sm="12" md={{ size: 6, offset: 3 }}>
@@ -96,17 +98,23 @@ class UserContributions extends Component {
 						<DonutChart ref='chart' data={produceData} height={300} width={500}/>
 					</Col>
 				</Row>	
+				
 
 				<Row className = "subheading">
 					<Col>
-					<h2 className="sub">Total weight of compost collected (lbs)</h2>
-					<DonutChart ref='chart' data={compostData} height={300} width={500}/>
+						<h2 className="sub">Total weight of compost collected (lbs)</h2>
 					</Col>
+					<Col>
+						<DonutChart ref='chart' data={compostData} height={300} width={500}/>
+					</Col>
+					
 				</Row>
 
 				<Row className = "subheading">
 					<Col>
 					<h2 className="sub">Total number of volunteer hours</h2>
+					</Col>
+					<Col>
 					<DonutChart ref='chart' data={volunteerData} height={300} width={500}/>
 					</Col>
 				</Row>

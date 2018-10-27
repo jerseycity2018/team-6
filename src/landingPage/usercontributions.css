@@ -1,0 +1,25 @@
+.carousel-caption {
+	padding-bottom: 0px;
+}
+
+.heading {
+	font-family: 'Noto Serif', sans-serif;
+	font-size: 50px;
+	padding: 30px 20px;
+}
+
+.subheading{
+	margin: 10px;
+	font-family: 'Noto Serif', sans-serif;
+}
+
+.sub{
+    text-align: center; 
+    top: 50%;
+	padding: 20px;
+}
+
+.img {
+	width: 80%;
+	height: 80%;
+}
