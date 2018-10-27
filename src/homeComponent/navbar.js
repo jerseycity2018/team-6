@@ -20,10 +20,13 @@ class NavigationBar extends React.Component {
         return (
           <div>
             <Navbar color="light" light expand="md">
-              <NavbarBrand href="/home">Home</NavbarBrand>
+              <NavbarBrand pull-left><img src="/src/images/logo.svg"/></NavbarBrand>
               <NavbarToggler onClick={this.toggle} />
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
+                  <NavItem>
+                    <NavLink href="/home">Home</NavLink>
+                  </NavItem>
                   <NavItem>
                     <NavLink href="/mission">Mission</NavLink>
                   </NavItem>
