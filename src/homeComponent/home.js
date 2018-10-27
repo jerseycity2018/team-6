@@ -57,9 +57,6 @@ class home extends Component {
 				        </Row>
 				    </Container>
                 </div>
-				<div className="footer">
-					<footer>Copyright &copy; 2018 All rights reserved.</footer>
-				</div>
             </div>
         );
     }
