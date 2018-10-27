@@ -36,7 +36,7 @@ class home extends Component {
 							  Raise awareness and promote the program, maintain the NYCHA residents's initial commitment to their behavior changes, 
 							  and incentivize continued use of the platform and engagement with GCF’s programs. 
 							  Empower and encourage the users to meet their needs by using reward programs and leader board system to keep track of their participation in the program.
-	                		
+	                	
 	                		</p>
 
 	                		<h2 className="sub">Community</h2>
@@ -52,6 +52,9 @@ class home extends Component {
 				        </Row>
 				    </Container>
                 </div>
+				<div className="footer">
+					<footer>Copyright &copy; 2018 All rights reserved.</footer>
+				</div>
             </div>
         );
     }

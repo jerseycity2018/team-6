@@ -26,3 +26,9 @@ h1 .mission-statement {
 	width: 80%;
 	height: 80%;
 }
+
+.footer{
+	font-family: 'Noto Serif', sans-serif;
+	background: gainsboro;
+	padding: 20px;
+}
