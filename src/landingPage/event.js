@@ -1,6 +1,6 @@
 import React from 'react';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-
+import firebase from './firebase.js';
 
 const events = [];
 
@@ -16,23 +16,41 @@ function addEvents(quantity) {
   }
 }
 
-addEvents(5);
 
-export default class EventNavTable extends React.Component {
-  render() {
-    const selectRow = {
-      mode: 'checkbox',
-      clickToSelect: true
-    };
-    const keyBoardNav = {
-      clickToNav: false
-    };
-    return (
-      <BootstrapTable data={ events } selectRow={ selectRow } keyBoardNav={ keyBoardNav }>
-          <TableHeaderColumn dataField='event_id' isKey={ true }>Event #</TableHeaderColumn>
-          <TableHeaderColumn dataField='event_description'>Description</TableHeaderColumn>
-          <TableHeaderColumn dataField='event_date'>Date</TableHeaderColumn>
-      </BootstrapTable>
-    );
-  }
+class HoverStripedTable extends React.Component {
+    componentDidMount() {
+        const eventRef = firebase.database().ref('events');
+        eventRef.on('value', (snapshot) => {
+          let events = snapshot.val();
+          let newEvent = [];
+          for (let event in events) {
+            newEvent.push({
+                event_id: event,
+                event_description: 'Event description ' + event_id,
+                event_date: event_date
+            });
+          }
+          this.setState({
+            items: newEvent
+          });
+        });
+    }
+
+    render() {
+        const selectRow = {
+            mode: 'checkbox',
+            clickToSelect: true
+          };
+          const keyBoardNav = {
+            clickToNav: false
+          };
+        return (
+            <BootstrapTable data={ events } selectRow={ selectRow } keyBoardNav={ keyBoardNav }>
+            <TableHeaderColumn dataField='event_id' isKey={ true }>Event #</TableHeaderColumn>
+            <TableHeaderColumn dataField='event_description'>Description</TableHeaderColumn>
+            <TableHeaderColumn dataField='event_date'>Date</TableHeaderColumn>
+        </BootstrapTable>
+        );
+    }
 }
+export default HoverStripedTable;
