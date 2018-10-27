@@ -1,8 +1,11 @@
-# Lab 1 - Tumblr
+# Green City Force Presented by Team-6
 
-Tumblr is a photo browsing app using the [The Tumblr API](https://www.tumblr.com/docs/en/api/v2#posts).
 
-Time spent: 3 hours spent in total
+##Mission and Vision:
+
+Green City Force’s (GCF) mission is to break the cycle of poverty, preparing urban young adults to succeed in their chosen careers by engaging them in service, training and work experiences related to the clean energy economy. In doing so, GCF encourages them to lead socially and environmentally responsible lives.
+
+
 
 ## User Stories
 
