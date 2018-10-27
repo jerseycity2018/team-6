@@ -12,3 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+#mission, #aboutus{
+  width: 35rem;
+  background-color: lightblue;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
