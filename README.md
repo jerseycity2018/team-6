@@ -1,7 +1,6 @@
 # Green City Force Presented by Team-6
 
-
-##Mission and Vision:
+## Mission and Vision
 
 Green City Force’s (GCF) mission is to break the cycle of poverty, preparing urban young adults to succeed in their chosen careers by engaging them in service, training and work experiences related to the clean energy economy. In doing so, GCF encourages them to lead socially and environmentally responsible lives.
 
@@ -11,8 +10,8 @@ Green City Force’s (GCF) mission is to break the cycle of poverty, preparing u
 
 The following **required** user stories are complete:
 
-- [ ] 
-- [ ] 
+- [ ] Allows user to browse the list of free produce available everyday
+- [ ] Display events hosted by the Farm such as cooking lessons, yoga classes, farming lessons
 - [ ] 
 - [ ] 
 - [ ] 

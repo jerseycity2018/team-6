@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Navbar, Nav, NavItem, NavLink} from 'reactstrap';
+import { Navbar, Nav, NavItem, NavLink, NavbarBrand, NavbarToggler, Collapse} from 'reactstrap';
   
-  export default class Example extends React.Component {
+class NavigationBar extends React.Component {
     constructor(props) {
       super(props);
   
@@ -17,32 +17,24 @@ import { Navbar, Nav, NavItem, NavLink} from 'reactstrap';
       });
     }
     render() {
-      return (
-        <div>
-            <Navbar inverse collapseOnSelect>
-            <Navbar.Header>
-                <Navbar.Brand>
-                <a href="/home">Home</a>
-                </Navbar.Brand>
-                <Navbar.Toggle />
-            </Navbar.Header>
-            <Navbar.Collapse>
-                <Nav pullRight>
-                <NavItem eventKey={1} href="/mission">
-                    Mission
-                </NavItem>
-                <NavItem eventKey={2} href="#">
-                    someOtherStuff
-                </NavItem>
+        return (
+          <div>
+            <Navbar color="light" light expand="md">
+              <NavbarBrand href="/home">Home</NavbarBrand>
+              <NavbarToggler onClick={this.toggle} />
+              <Collapse isOpen={this.state.isOpen} navbar>
+                <Nav className="ml-auto" navbar>
+                  <NavItem>
+                    <NavLink href="/mission">Mission</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href="/signIn">Sign In</NavLink>
+                  </NavItem>
                 </Nav>
-                <Nav pullRight>
-                <NavItem eventKey={1} href="/signInPage">
-                    Link Right
-                </NavItem>
-                </Nav>
-            </Navbar.Collapse>
+              </Collapse>
             </Navbar>
-        </div>
-      );
-  }
-}
+          </div>
+        );
+      }
+    }
+    export default NavigationBar;
