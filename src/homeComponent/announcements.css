@@ -1,0 +1,8 @@
+.green-box {
+    border-radius: 25px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 25px;
+    margin: 25px; 
+}
