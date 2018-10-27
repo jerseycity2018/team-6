@@ -33,7 +33,7 @@ class home extends Component {
 				          <Col sm="6" xs="12">
 				          	<h2 className="sub">Mission</h2>
 				          	<p>
-	                			Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+							  Raise awareness and promote the program, maintain the NYCHA residents's initial commitment to their behavior changes, and incentivize continued use of the platform and engagement with GCF’s programs. Empower and encourage the users to meet these needs by using reward programs and leader board system to keep track of their participation in the program.
 	                		
 	                		</p>
 
