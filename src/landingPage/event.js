@@ -16,6 +16,16 @@ class Event extends React.Component {
     }
 
     componentDidMount() {
+      // const itemsRef1 = firebase.database().ref('events');
+      //   const item = {
+      //     event_name: "Farm Info Session",
+      //     event_description: "Provide Information About the Farm and its goals.",
+      //     event_date: "Dec. 25 2018",
+      //   }
+
+      //   itemsRef1.push(item);
+        
+
         const eventRef = firebase.database().ref('events');
         eventRef.on('value', (snapshot) => {
           let events = snapshot.val();
@@ -44,11 +54,10 @@ class Event extends React.Component {
             clickToNav: false
           };
         return (
-            <BootstrapTable data={ this.state.events } selectRow={ selectRow } keyBoardNav={ keyBoardNav }>
-            <TableHeaderColumn dataField='event_id' isKey>#</TableHeaderColumn>
-            <TableHeaderColumn dataField='event_name'>Event Name</TableHeaderColumn>
-            <TableHeaderColumn dataField='event_description'>Description</TableHeaderColumn>
-            <TableHeaderColumn dataField='event_date}'>Date</TableHeaderColumn>
+            <BootstrapTable data={ this.state.events } setStatelectRow={ selectRow } keyBoardNav={ keyBoardNav }>
+            <TableHeaderColumn  width='150' dataField='event_name' isKey>Event Name</TableHeaderColumn>
+            <TableHeaderColumn  width='150' dataField='event_description'>Description</TableHeaderColumn>
+            <TableHeaderColumn  width='150'   dataField='event_date'>Date</TableHeaderColumn>
         </BootstrapTable>
         );
     }

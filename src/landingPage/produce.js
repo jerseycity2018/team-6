@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import FoodItem from './foodItem';
 import './foodItem.css';
-import firebase from './firebase.js';
 
 class Produce extends Component {
 	constructor() {
@@ -10,7 +9,6 @@ class Produce extends Component {
 			items: []
 		}
 	this.handleChange = this.handleChange.bind(this);
-	this.handleSubmit = this.handleSubmit.bind(this);
 	}
 	handleChange(e) {
   		this.setState({
@@ -18,17 +16,12 @@ class Produce extends Component {
  	 	});
 	}
 
-	handleSubmit(e) {
-  		e.preventDefault();
-	}
-
 	render(){
-		const produceList = this.state.items.map(item => <li>{item}</li>)
 		return (
 			<div className = 'produce'>
 				<header> 
 					<div className = 'wrapper'>
-						<h1 className="heading prohead"> Produce Currently Available </h1> 
+						<h1 className="prohead"> Produce Currently Available </h1> 
 					</div>
 				</header>
 				<div className="foodContainer">

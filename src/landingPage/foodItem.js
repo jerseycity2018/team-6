@@ -7,9 +7,9 @@ import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
 const cards = (foodName, foodImage) => {
 	return (
 		<div>
-			<Card>
+			<Card style={{boxShadow: '0 4px 2px -2px gray'}}>
 	        	<CardImg top width="100%"
-	        		style={{ width: '100%', height: '300px', objectFit: 'cover' }}
+	        		style={{ width: '100%', height: '300px', objectFit: 'cover'}}
 	        		src={foodImage} alt="Card image cap" />
 	      		<CardTitle
 	      			style={{padding: '10px',fontFamily: 'Noto Serif'}}

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Produce from './produce';
 import NavigationBar from '../homeComponent/navbar';
 import Event from './event';
+import './landingPage.css';
 
 class landingPage extends Component {
 	constructor() {
@@ -14,7 +15,11 @@ class landingPage extends Component {
 				<div>
 					<NavigationBar />
 					<Produce />
-					<Event />
+					<hr/>
+					<h1 className="heading2">Events</h1>
+					<div className="event">
+						<Event/>
+					</div>
 				</div>
 			</div>
 		);

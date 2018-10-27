@@ -1,0 +1,17 @@
+.event {
+	margin: 50px;
+}
+
+hr.style-five {
+	width: 50%;
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+}
+hr.style-five:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
+}
+
+.heading2 {
+	font-family: 'Noto Serif', sans-serif;	
+}
