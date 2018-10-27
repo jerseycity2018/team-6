@@ -2,10 +2,6 @@ import React, {Component} from 'react';
 import {Switch, Route} from 'react-router-dom';
 import home from './homeComponent/home';
 import produce from './landingPage/produce';
-<<<<<<< HEAD
-=======
-import landingPage from './landingPage/landingPage';
->>>>>>> master
 
 class Routes extends Component {
 	render() {
@@ -13,11 +9,8 @@ class Routes extends Component {
 			<main>
 				<Switch>
 					<Route exact path='/home' component={home}/>
-<<<<<<< HEAD
 					<Route exact path='/produce' component={produce}/>
-=======
-					<Route exact path='/landingPage' component={landingPage}/>
->>>>>>> master
+					<Route exact path='/event' component={event}/>
 				</Switch>
 			</main>
 		);
