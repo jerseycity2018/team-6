@@ -25,18 +25,20 @@ class Announcements extends React.Component {
 					</div>
 				</header>
 				<body>
-					<div class = 'green-box'> 
-						<div>
+				<div class="row">
+					<div class="col-md-6 offset-md-3">
+						<div class = 'green-box'>
 							<h3>Updates about today's evening yoga class at 6:30 pm</h3>
 							<p>Class is cancelled</p>
 						</div>
-						<div>
+						<div class = 'green-box'>
 							<h3>Exciting news about opening another farm location in West 
 								8th Street, Brooklyn area</h3>
 								<p>Please, come, check it out, and volunteer at our recently
 									opened farm in Brooklyn!</p>
 						</div>
 					</div>
+				</div>
 				</body>
 			</div>
 		);
