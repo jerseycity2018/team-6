@@ -49,6 +49,7 @@ class FoodItem extends Component {
   		const itemsRef = firebase.database().ref('items');
   		itemsRef.on('value', (snapshot) => {
     	let items = snapshot.val();
+    	console.log(items)
     	let newState = [];
     	for (let item in items) {
       		newState.push(

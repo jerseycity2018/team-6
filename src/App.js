@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Routes from './Routes';
 import './App.css';
+import FooterPage from './homeComponent/footer';
 
 class App extends Component {
   render() {

@@ -1,37 +1,29 @@
 import React from "react";
 import { Col, Container, Row, Footer } from "mdbreact";
+import 'mdbreact/dist/css/mdb.css';
+import ReactDOM from 'react-dom';
+import { SocialIcon } from 'react-social-icons';
 
 class FooterPage extends React.Component {
     render() {
         return (
             <Footer color="#28a745" className="font-small pt-4 mt-4">
-                <Container fluid className="text-center text-md-left">
+            <div className="footer-copyright text-center py-3">
+                    <Container fluid>
                     <Row>
-                        <Col md="6">
-                            <ul>
-                                <li className="list-unstyled">
-                                    <a class="btn-floating btn-lg btn-fb" type="button" role="button">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li className="list-unstyled">
-                                    <a class="btn-floating btn-lg btn-tw" type="button" role="button">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li className="list-unstyled">
-                                    <a class="btn-floating btn-lg btn-ins" type="button" role="button">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-                                </li>
-                            </ul>
+                    <Col  sm="12" md={{ size: 6, offset: 3 }}>
+                        <SocialIcon url="http://twitter.com/in/jaketrent" />
+                        <SocialIcon url="http://facebook.com/in/jaketrent" />
+                        <SocialIcon url="http://instagram.com/in/jaketrent" />
+                    </Col>
+                    </Row>
+
+                    <Row>
+                        <Col  sm="12" md={{ size: 6, offset: 3 }}>
+                        &copy; {new Date().getFullYear()} Copyright:{" "}
+                        <a href="https://www.greencityforce.org"> greencityforce.org </a>
                         </Col>
                     </Row>
-                </Container>
-                <div className="footer-copyright text-center py-3">
-                    <Container fluid>
-                    &copy; {new Date().getFullYear()} Copyright:{" "}
-                    <a href="https://www.greencityforce.org"> greencityforce.org </a>
                     </Container>
                 </div>
             </Footer>
