@@ -11,7 +11,7 @@ Green City Force’s (GCF) mission is to break the cycle of poverty, preparing u
 The following **required** user stories are complete:
 
 - [ ] Allows user to browse the list of free produce available everyday
-- [ ] Display events hosted by the Farm
+- [ ] Display events hosted by the Farm such as cooking lessons, yoga classes, farming lessons
 - [ ] 
 - [ ] 
 - [ ] 
